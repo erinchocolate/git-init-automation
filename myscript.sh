@@ -1,9 +1,11 @@
 #! /bin/bash
 function create(){
   source .env 
+  # set up the virtual environment
   pipenv install
   pipenv shell
   python main.py $DIR
+  exit
   cd $FOLDERPATH
   mkdir -p $DIR
   echo "creating $DIR"
