@@ -1,6 +1,8 @@
 #! /bin/bash
 function create(){
-  source .env
+  source .env 
+  pipenv install
+  pipenv shell
   python main.py $DIR
   cd $FOLDERPATH
   mkdir -p $DIR
